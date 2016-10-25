@@ -83,8 +83,7 @@
     	top: 16px
 	}
 	/* ul stuff */
-	.hub-page ul,
-	.listing-page ul {
+	.hub-page ul,.listing-page ul {
 	    margin: 0 !important;
 	    padding: 0 !important;
 	}
@@ -111,61 +110,6 @@
 	}
 /*============================================================*/ 
 
-
-/* hide 'powered by uberflip'
-=============================================================*/
-	/*body .description-block .powered-by {
-		display: none;
-	}*/
-/*===========================================================*/
-
-
-/* remove default hub logo
-==============================================================*/
-	body .top-nav .secondary-logo {
-		display: none !important;
-	}
-	.top-nav ul.left-nav.desktop {
-		left: -11px;
-    	top: 14px;
-		position: absolute;
-	}
-/*============================================================*/ 
-
-
-/***********************
-
-	   COLORS 
-
- ***********************/
-
-/* custom color for 'current location' nav item bg
-=============================================================*/
-	/*body .top-nav .left-nav.desktop>li.selected>a {
-		background-color: rgb(0, 153, 204);
-	}*/
-/*============================================================*/
-
-
-/* hub background color
-=============================================================*/
-	/*body,
-	body #hubs-container,
-	html body.lab_permanent_header.hub-page .main {
-		background-color: #f4f4f4 !important;
-	}*/
-/*============================================================*/ 
-
-
-
-
-
-/***********************
-
-	 NAVBAR
-
- ***********************/
-
  /* increase menu font size
 =============================================================*/
  	body .top-nav .left-nav.desktop>li>a {
@@ -179,96 +123,24 @@
 	}
 /*============================================================*/
 
-/* top nav follow on scroll css
+/* hide 'powered by uberflip'
 =============================================================*/
-/*body .top-nav.fixed {
-	position: fixed;
-	top: 75px;
-	width: 100%;
-}
-.listing-page #hubs-container,
-.single-page  #hubs-container {
-	margin-top: 175px;
-}
-.hub-page .description-block {
-	margin-top: 64px;
-}*/
-/*============================================================*/ 
-
-/* 	Invert top nav colors
-=============================================================*/ 
-	/*body .top-nav,
-	.top-nav .left-nav.desktop>li ul li a,
-	body .top-nav .left-nav.desktop>li.hover.has-children,
-	.NAV-BACKGROUND-COLOR
-	{
-	    background-color: black; 
-	}
-	body .top-nav .left-nav.desktop>li>a,
-	body .top-nav .left-nav.desktop>li>ul>a,
-	.top-nav .left-nav.desktop>li ul li a,
-	body .top-nav .secondary-logo a,
-	.NAV-TEXT-COLOR
-	{
-		color: white;
-	}
-	body .top-nav .left-nav.desktop>li.selected>a,
-	body .top-nav .left-nav.desktop>li.selected.hover>a,
-	body .top-nav .left-nav.desktop>li.selected.hover>a:hover,
-	body .top-nav .left-nav.desktop>li>a:hover,
-	body .top-nav .left-nav.desktop>li ul li a:hover,
-	body .top-nav .secondary-logo a:hover,
-	.NAV-TEXT-HOVER-COLOR
-	{
-		color: skyblue;
-
-		text-decoration: none !important;
-	}
-	body .top-nav .left-nav.desktop>li ul li {
-		margin-bottom: 0;
-		border-right: 0;
-	}
-	.top-nav .left-nav.desktop>li.hover {
-	    text-decoration: none;   
-	}
-	.top-nav .left-nav.desktop>li ul li a {
-	    font-size: .8em;
-	    padding: 13px 10px 8px;
-	    border: none !important;
+	/*body .description-block .powered-by {
+		display: none;
 	}*/
 /*===========================================================*/
 
-/* Font awesome nav icons (white)
-=============================================================*/ 
-/*	.top-nav .right-side-btns .search-container .search-toggle,
-	.top-nav .right-side-btns .search-container .search-toggle:hover,
-	.top-nav .right-side-btns .share-toggle:hover,
-	.top-nav .share-toggle {
-		background-color: transparent;
-		border: none;
-		box-shadow: none;
+/* remove default hub logo
+==============================================================*/
+	body .top-nav .secondary-logo {
+		display: none !important;
 	}
-	.top-nav .right-side-btns .search-toggle .search-icon > span,
-	.top-nav .right-side-btns .share-toggle,
-	body .top-nav .right-side-btns .search-toggle.expanded .search-icon span  {
-		background-size: 86%;
-		background-repeat: no-repeat;
-		background-position: initial;
+	.top-nav ul.left-nav.desktop {
+		left: -11px;
+    	top: 14px;
+		position: absolute;
 	}
-	body .top-nav .search-container .search-toggle .search-icon > span{
-		background-image:  url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMjE2IDgzMnEwLTE4NS0xMzEuNS0zMTYuNXQtMzE2LjUtMTMxLjUtMzE2LjUgMTMxLjUtMTMxLjUgMzE2LjUgMTMxLjUgMzE2LjUgMzE2LjUgMTMxLjUgMzE2LjUtMTMxLjUgMTMxLjUtMzE2LjV6bTUxMiA4MzJxMCA1Mi0zOCA5MHQtOTAgMzhxLTU0IDAtOTAtMzhsLTM0My0zNDJxLTE3OSAxMjQtMzk5IDEyNC0xNDMgMC0yNzMuNS01NS41dC0yMjUtMTUwLTE1MC0yMjUtNTUuNS0yNzMuNSA1NS41LTI3My41IDE1MC0yMjUgMjI1LTE1MCAyNzMuNS01NS41IDI3My41IDU1LjUgMjI1IDE1MCAxNTAgMjI1IDU1LjUgMjczLjVxMCAyMjAtMTI0IDM5OWwzNDMgMzQzcTM3IDM3IDM3IDkweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==');
-	}
-	.top-nav .right-side-btns .share-toggle {
-		background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMzQ0IDEwMjRxMTMzIDAgMjI2LjUgOTMuNXQ5My41IDIyNi41LTkzLjUgMjI2LjUtMjI2LjUgOTMuNS0yMjYuNS05My41LTkzLjUtMjI2LjVxMC0xMiAyLTM0bC0zNjAtMTgwcS05MiA4Ni0yMTggODYtMTMzIDAtMjI2LjUtOTMuNXQtOTMuNS0yMjYuNSA5My41LTIyNi41IDIyNi41LTkzLjVxMTI2IDAgMjE4IDg2bDM2MC0xODBxLTItMjItMi0zNCAwLTEzMyA5My41LTIyNi41dDIyNi41LTkzLjUgMjI2LjUgOTMuNSA5My41IDIyNi41LTkzLjUgMjI2LjUtMjI2LjUgOTMuNXEtMTI2IDAtMjE4LTg2bC0zNjAgMTgwcTIgMjIgMiAzNHQtMiAzNGwzNjAgMTgwcTkyLTg2IDIxOC04NnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=');
-	}*/
-/*===========================================================*/ 
-
-/***********************
-
-	  TEXT
-
- ***********************/
-
+/*============================================================*/ 
 
 /* always show description
 ==============================================================*/
@@ -277,209 +149,18 @@
 }*/
 /*============================================================*/
 
-
-/* clean up tile text (beta)
-==============================================================*/
-/*.tile.single:not(.highlight) .description h4 {
-    font-size: 16px;
-    letter-spacing: .5px;
-    line-height: normal;
-    margin-top: 15px;
-}
-.tile.single:not(.highlight) .description h3 {
-    font-size: 21px;
-    line-height: 22px;
-    padding-top: 0px;
-}
-.tile.single:not(.highlight) .description h3:not(.avatar) {
-	padding-top: 10px;
-}*/
-/*============================================================*/
-
-
-
-
-/***********************
-
-	  TILE STYLE
-
- ***********************/
-
-
-/* 	clean tiles with dotted divider
+/* hub background color
 =============================================================*/
-	/*.webgl li.tile.single>a.view {
-	    background-image: none;
-	    padding-left: 0px;
-	    width: 90%;
-	    margin-left: 5%;
-	    text-transform: uppercase;
-	    font-size: 14px;
-	    background-color: white;
-	 }
-	 .webgl .tile.single>a.view {
-	    border-top: 2px dotted #d0d0d0;
-	 }
-	 .webgl .tile.single>a.view:before {
-	    display: none;
-	 }
-	 .webgl .tile {
-	    box-shadow: none;
-	    border: 1px solid #d4d4d4;
-	 }
-	 .webgl .tile.single.uberflip.portrait:not(.list) .description {
-		background: white;
-	 }*/
+	/*body,
+	body #hubs-container,
+	html body.lab_permanent_header.hub-page .main {
+		background-color: #f4f4f4 !important;
+	}*/
 /*============================================================*/ 
 
 
-/* 	Horizontal Highlight tile (required: 'image to bg' function on .highlight [see inject.js])
-=============================================================*/
-	/*@media only screen and (min-width: 990px) {
-	    .webgl body.lab_highlight .tile.highlight {
-	     height: 330px;  
-	     width: 790px;
-	    }
-	    .webgl .lab_highlight .tile.highlight .img {
-		    position: absolute;
-		    top: 0;
-		    left: 50%;
-		    height: 100% !important;
-		    width: 50%;
-	    }
-	    .webgl .lab_highlight .tile.highlight .description {
-	        position: absolute;
-	        top: 0;
-	        right: 50%;
-	        left: 0;
-	        width: 50%;
-	        height: 100% !important;
-	    }
-	    .webgl .lab_highlight .tile.highlight a.view {
-	        width: 50%;
-	            padding-left: 27px;
-	            margin-left: 0;
-	    }
-	    .webgl .lab_highlight .main .tile.highlight .description h3,
-	    .webgl .lab_highlight .tile.highlight.uberflip.portrait .description>h3 {
-	        font-size: 36px;
-	        line-height: 40px;
-            word-wrap: normal;
-		    word-break: normal;
-		    white-space: normal;
-	    }
-	    .webgl .lab_highlight .tile.highlight .description h4 {
-	        font-size: 16px;
-	        line-height: normal;
-	    }
-	    
-	    .webgl .lab_highlight .tile.highlight .description h3.avatar {
-
-	        line-height: normal;
-	        white-space: normal;
-	        overflow: visible;
-	        word-wrap: break-word;
-	    }
-        .webgl .lab_highlight  .tile.highlight>.description:after {
-	        display: none;
-	    }
-	}*/
-/*============================================================*/
-
-/* hover effect (beta)
-==============================================================*/
-/*.tile .img {
-    -webkit-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-    background-size: cover;
-    height: 38%;
-}
-#hubs-container li.tile.hover:not(.highlight) .description {
-    height: 100% !important;
-}
-#hubs-container li.tile .description {
-    transition: all 0.4s ease-in-out!important;
-}
-.tile.single>.description:after {
-    content: '';
-    margin-left: -20px;
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 25%);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 25%);
-    height: 6rem;
-    bottom: 0;
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 5;
-}
-.tile.single .description .friendly-timestamp {
-    display: none;
-}
-div.tile.single>a.view,
-body li.tile.single>a.view {
-    background-image: none;
-    background: #fff !important;
-    border: none;
-    padding-left: 18px;
-}
-
-.tile.single>a.view:before {
-    display: none;
-}
-.tile.single:hover>a.view,
-.TILE_LINK_HOVER_COLOR
-{
-    
-    color: #ffc820;
-
-    text-decoration: none;
-}
-.tile a.item-link.hooked:not(.view) {
-    z-index: 999;
-}
-.tile .share-single {
-    z-index: 1000;
-}*/
-/*============================================================*/
 
 
-/* Cooler Move To Top button
-===========================================================*/ 
-/*#moveToTop {
-	right: auto;
-	bottom: 2rem;
-	left: 1rem!important;
-	top: auto;
-	margin: 0!Important;
-	z-index: 2000;
-}
-#moveToTop a {
-						background: #f47920!important;
-	opacity: 1;
-}
-#moveToTop:after {
-						color: #f47920;
-	content: 'top';
-	display: block;
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	text-align: center;
-	white-space: nowrap;
-}
-#moveToTop a:after {
-	content: '';
-	width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-bottom: 10px solid white;
-	top: -17px;
-	right: -6px;
-	position: relative;
-}*/
-/*===========================================================*/ 
 
 
 

@@ -2,8 +2,8 @@
   Onbrand Customization CSS
 =============================================================*/
 </style>
-    <link rel="stylesheet" href="//cihost.uberflip.com/<%= name %>/onbrand.css">
     <link rel="stylesheet" href="//cihost.uberflip.com/<%= name %>/client/client.css">
+    <link rel="stylesheet" href="//cihost.uberflip.com/<%= name %>/onbrand.css">
 <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">-->
 <style>
 /*============================================================*/ 
@@ -126,59 +126,6 @@ window.onload               = function() { window.onbrand.onWindowLoad(); }
   ===============================================================*/
 
 }(window.jQuery, window.Hubs));
-
-
-/************************
-
-        SNIPPETS
-
- ************************/
-
-
-/* top nav follow on scroll, with followAt for hub page
-===============================================================*/
-        // function prepNav(){
-        //     var $topNav = $('.top-nav');
-        //     var followAt = 328;
-
-        //     if($('body').hasClass('hub-page')){
-        //         $topNav.removeClass('fixed');
-        //         $(window).scroll(function(){
-        //             if ($(this).scrollTop() < followAt) {
-        //                 $topNav.removeClass('fixed');
-        //                 $('.description-block').css('margin-top', '0');
-        //             } else {
-        //                 $topNav.addClass('fixed');
-        //                 $('.description-block').css('margin-top', '64px');
-        //             }
-        //         });
-        //     } else {
-        //         $topNav.addClass('fixed');
-        //         $(window).unbind("scroll");
-        //         $('.description-block').css('margin-top', '64px');
-        //     }
-        // }
-/*=============================================================*/
-
-/* content reveal hover effect (beta)   
-    call on pagechange, itemsloaded, and load
-===============================================================*/ 
-// function tileHoverEffect() {
-//     $('.tile a.item-link:not(.view)').on({
-//         mouseenter: function () 
-//         {
-//             $(this).closest('.tile').addClass('hover');
-//             return false;
-//         },
-//         mouseleave: function () 
-//         {
-//             $(this).closest('.tile').removeClass('hover');
-//             return false;
-//         }
-//     });
-// }
-/*=============================================================*/
-
 
 
 
