@@ -1,0 +1,388 @@
+/*-------------------------------------------------------------------------------------/
+/*-- Percentage Variables ------------------------------------------------------------------------/
+/*------------------------------------------------------------------------------------*/
+
+@fluid: true;
+
+/*XS*/
+
+@xs-break: 0;
+@xs-columns: 1;
+@xs-pxHeight: 360;
+@xs-perGutter: 1;
+@xs-perMargin: 2;
+@xs-pxGutter: 10;
+@xs-pxMargin: 20;
+@xs-vGutter: 30;
+@xs-maxWidthUnit: px;
+@xs-perMaxWidth: none;
+@xs-pxMaxWidth: none;
+
+/*SM*/
+
+@sm-break: 544;
+@sm-columns: 2;
+@sm-pxHeight: 360;
+@sm-perGutter: 1;
+@sm-perMargin: 2;
+@sm-pxGutter: 10;
+@sm-pxMargin: 20;
+@sm-vGutter: 30;
+@sm-maxWidthUnit: px;
+@sm-perMaxWidth: none;
+@sm-pxMaxWidth: none;
+
+/*MD*/
+
+@md-break: 768;
+@md-columns: 3;
+@md-pxHeight: 360;
+@md-perGutter: 1;
+@md-perMargin: 2;
+@md-pxGutter: 10;
+@md-pxMargin: 20;
+@md-vGutter: 30;
+@md-maxWidthUnit: px;
+@md-perMaxWidth: none;
+@md-pxMaxWidth: none;
+
+/*LG*/
+
+@lg-break: 992;
+@lg-columns: 4;
+@lg-pxHeight: 360;
+@lg-perGutter: 1;
+@lg-perMargin: 2;
+@lg-pxGutter: 10;
+@lg-pxMargin: 210;
+@lg-vGutter: 30;
+@lg-maxWidthUnit: px;
+@lg-perMaxWidth: none;
+@lg-pxMaxWidth: none;
+
+/*XL*/
+
+@xl-break: 1200;
+@xl-columns: 5;
+@xl-pxHeight: 360;
+@xl-perGutter: 1;
+@xl-perMargin: 2;
+@xl-pxGutter: 10;
+@xl-pxMargin: 20;
+@xl-vGutter: 30;
+@xl-maxWidthUnit: px;
+@xl-perMaxWidth: none;
+@xl-pxMaxWidth: 960px;
+
+/*Media Queries*/
+
+@xs: ~"only screen and (min-width: @{xs-break}px) and (max-width: @{sm-break}px)";
+@sm: ~"only screen and (min-width: @{sm-break}px) and (max-width: @{md-break}px)";
+@md: ~"only screen and (min-width: @{md-break}px) and (max-width: @{lg-break}px)";
+@lg: ~"only screen and (min-width: @{lg-break}px) and (max-width: @{xl-break}px)";
+@xl: ~"only screen and (min-width: @{xl-break}px)";
+
+/*Menu*/
+
+@media @xs {
+	#bs #xsHeading h4 {
+		font-weight: bold
+	}
+}
+
+@media @sm {
+	#bs #smHeading h4 {
+		font-weight: bold
+	}
+}
+
+@media @md {
+	#bs #mdHeading h4 {
+		font-weight: bold
+	}
+}
+
+@media @lg {
+	#bs #lgHeading h4 {
+		font-weight: bold
+	}
+}
+
+@media @xl {
+	#bs #xlHeading h4 {
+		font-weight: bold
+	}
+}
+
+
+/*Resets*/
+
+.level-two {
+	width: auto!important;
+}
+
+
+/*-------------------------------------------------------------------------------------/
+/*-- Grid -----------------------------------------------------------------------------/
+/*------------------------------------------------------------------------------------*/
+
+.grid .page-width {
+	box-sizing: border-box;
+	margin: 0 auto!important;
+	width: 100%;
+//	box-shadow: 0 0 1px 1px red;
+	position: relative;
+	& when (@fluid) {
+		@media @xs {
+			& when (isnumber(@xs-perMaxWidth)) {
+				max-width: @xs-perMaxWidth * 1%;
+			}
+			padding: 0 @xs-perMargin * 1%;
+		}
+		@media @sm {
+			& when (isnumber(@sm-perMaxWidth)) {
+				max-width: @sm-perMaxWidth * 1%;
+			}
+			padding: 0 @sm-perMargin * 1%;
+		}
+		@media @md {
+			& when (isnumber(@md-perMaxWidth)) {
+				max-width: @md-perMaxWidth * 1%;
+			}
+			padding: 0 @md-perMargin * 1%;
+		}
+		@media @lg {
+			& when (isnumber(@lg-perMaxWidth)) {
+				max-width: @lg-perMaxWidth * 1%;
+			}
+			padding: 0 @lg-perMargin * 1%;
+		}
+		@media @xl {
+			& when (isnumber(@xl-perMaxWidth)) {
+				max-width: @xl-perMaxWidth * 1%;
+			}
+			padding: 0 @xl-perMargin * 1%;
+		}
+	}
+	& when not (@fluid) {
+		@media @xs {
+			& when (isnumber(@xs-pxMaxWidth)) {
+				max-width: @xs-pxMaxWidth * 1px;
+			}
+			padding: 0 @xs-pxMargin * 1px;
+		}
+		@media @sm {
+			& when (isnumber(@sm-pxMaxWidth)) {
+				max-width: @sm-pxMaxWidth * 1px;
+			}
+			padding: 0 @sm-pxMargin * 1px;
+		}
+		@media @md {
+			& when (isnumber(@md-pxMaxWidth)) {
+				max-width: @md-pxMaxWidth * 1px;
+			}
+			padding: 0 @md-pxMargin * 1px;
+		}
+		@media @lg {
+			& when (isnumber(@lg-pxMaxWidth)) {
+				max-width: @lg-pxMaxWidth * 1px;
+			}
+			padding: 0 @lg-pxMargin * 1px;
+		}
+		@media @xl {
+			& when (isnumber(@xl-pxMaxWidth)) {
+				max-width: @xl-pxMaxWidth * 1px;
+			}
+			padding: 0 @xl-pxMargin * 1px;
+		}
+	}
+	@media @xs {
+		& when (@xs-maxWidthUnit =px) and (isnumber(@xs-pxMaxWidth)) {
+			max-width: @xs-pxMaxWidth*1px;
+		}
+		& when (@xs-maxWidthUnit =per) and (isnumber(@xs-perMaxWidth)) {
+			max-width: @xs-perMaxWidth*1%;
+		}
+	}
+	@media @sm {
+		& when (@sm-maxWidthUnit =px) and (isnumber(@sm-pxMaxWidth)) {
+			max-width: @sm-pxMaxWidth*1px;
+		}
+		& when (@sm-maxWidthUnit =per) and (isnumber(@sm-perMaxWidth)) {
+			max-width: @sm-perMaxWidth*1%;
+		}
+	}
+	@media @md {
+		& when (@md-maxWidthUnit =px) and (isnumber(@md-pxMaxWidth)) {
+			max-width: @md-pxMaxWidth*1px;
+		}
+		& when (@md-maxWidthUnit =per) and (isnumber(@md-perMaxWidth)) {
+			max-width: @md-perMaxWidth*1%;
+		}
+	}
+	@media @lg {
+		& when (@lg-maxWidthUnit =px) and (isnumber(@lg-pxMaxWidth)) {
+			max-width: @lg-pxMaxWidth*1px;
+		}
+		& when (@lg-maxWidthUnit =per) and (isnumber(@lg-perMaxWidth)) {
+			max-width: @lg-perMaxWidth*1%;
+		}
+	}
+	@media @xl {
+		& when (@xl-maxWidthUnit =px) and (isnumber(@xl-pxMaxWidth)) {
+			max-width: @xl-pxMaxWidth*1px;
+		}
+		& when (@xl-maxWidthUnit =per) and (isnumber(@xl-perMaxWidth)) {
+			max-width: @xl-perMaxWidth*1%;
+		}
+	}
+}
+
+.grid .page-width .page-aligner {
+		box-sizing: border-box;
+//	box-shadow: 0 0 1px 1px green;
+	width: initial;
+	& when (@fluid) {
+		@media @xs {
+			margin: auto @xs-perGutter * -1%;
+		}
+		@media @sm {
+			margin: auto @sm-perGutter*-1%;
+		}
+		@media @md {
+			margin: auto @md-perGutter*-1%;
+		}
+		@media @lg {
+			margin: auto @lg-perGutter*-1%;
+		}
+		@media @xl {
+			margin: auto @xl-perGutter*-1%;
+		}
+	}
+	& when not (@fluid) {
+		@media @xs {
+			margin: auto @xs-pxGutter*-1px;
+		}
+		@media @sm {
+			margin: auto @sm-pxGutter*-1px;
+		}
+		@media @md {
+			margin: auto @md-pxGutter*-1px;
+		}
+		@media @lg {
+			margin: auto @lg-pxGutter*-1px;
+		}
+		@media @xl {
+			margin: auto @xl-pxGutter*-1px;
+		}
+	}
+}
+
+.grid #collection-items ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	&:before {
+		display: none;
+	}
+	&:after {
+		content: "";
+		flex: auto;
+	}
+}
+
+.grid .tile {
+	padding: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	.img img[style] {
+		margin: 0!important;
+		min-width: 100%!important;
+		width: auto!important;
+	}
+	& when (@fluid) {
+		@media @xs {
+			width: ((100 - (@xs-perGutter*(@xs-columns * 2)))/@xs-columns)*1%;
+			margin: 0 @xs-perGutter*1% @xs-vGutter*1px;
+		}
+		@media @sm {
+			width: ((100 - (@sm-perGutter*(@sm-columns * 2)))/@sm-columns)*1%;
+			margin: 0 @sm-perGutter*1% @sm-vGutter*1px;
+		}
+		@media @md {
+			width: ((100 - (@md-perGutter*(@md-columns * 2)))/@md-columns)*1%;
+			margin: 0 @md-perGutter*1% @md-vGutter*1px;
+		}
+		@media @lg {
+			width: ((100 - (@lg-perGutter*(@lg-columns * 2)))/@lg-columns)*1%;
+			margin: 0 @lg-perGutter*1% @lg-vGutter*1px;
+		}
+		@media @xl {
+			width: ((100 - (@xl-perGutter*(@xl-columns * 2)))/@xl-columns)*1%;
+			margin: 0 @xl-perGutter*1% @xl-vGutter*1px;
+		}
+	}
+	& when not (@fluid) {
+		@media @xs {
+			margin: auto @xs-pxGutter*-1px @xs-vGutter*1px;
+		}
+		@media @sm {
+			margin: auto @sm-pxGutter*-1px @xs-vGutter*1px;
+		}
+		@media @md {
+			margin: auto @md-pxGutter*-1px @xs-vGutter*1px;
+		}
+		@media @lg {
+			margin: auto @lg-pxGutter*-1px @xs-vGutter*1px;
+		}
+		@media @xl {
+			margin: auto @xl-pxGutter*-1px @xs-vGutter*1px;
+		}
+	}
+}
+
+.description-block {
+	& when (@fluid) {
+		margin: 0 @xs-perGutter*1%;
+		@media @xs {
+			margin: @xs-vGutter*1px @xs-perGutter*1%;
+		}
+		@media @sm {
+			margin: @xs-vGutter*1px @sm-perGutter*1%;
+		}
+		@media @md {
+			margin: @xs-vGutter*1px @md-perGutter*1%;
+		}
+		@media @lg {
+			margin: @xs-vGutter*1px @lg-perGutter*1%;
+		}
+		@media @xl {
+			margin: @xs-vGutter*1px @xl-perGutter*1%;
+		}
+	}
+	& when not (@fluid) {
+		@media @xs {
+			margin: auto @xs-pxGutter*1px;
+		}
+		@media @sm {
+			margin: auto @sm-pxGutter*1px;
+		}
+		@media @md {
+			margin: auto @md-pxGutter*1px;
+		}
+		@media @lg {
+			margin: auto @lg-pxGutter*1px;
+		}
+		@media @xl {
+			margin: auto @xl-pxGutter*1px;
+		}
+	}
+}
+
+.grid .top-nav .page-aligner {
+	margin: auto;
+}

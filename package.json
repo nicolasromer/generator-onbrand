@@ -1,0 +1,14 @@
+{
+  "name": "generator-onbrand",
+  "version": "2.3.3",
+  "description": "Boilerplate for UF Hub",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  }
+}
