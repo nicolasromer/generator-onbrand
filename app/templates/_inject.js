@@ -16,22 +16,22 @@
 }(window.jQuery, window.Hubs));
 </script><script src="//cihost.uberflip.com/<%= name %>/onbrand.js"></script><script>
 (function($, Hubs, undefined) {
-/*===========================================
-  Add any hub event js into these functions
-============================================*/    
-Hubs.onLoad                 = function() { 
-    window.onbrand.onLoad();
-    // yourFunction();
-}
-Hubs.onResize               = function() { window.onbrand.onResize(); }
-Hubs.onScroll               = function() { window.onbrand.onScroll(); }
-Hubs.onPageChange           = function() { window.onbrand.onPageChange(); }
-Hubs.onItemsLoaded          = function() { window.onbrand.onItemsLoaded(); }
-Hubs.onCtaFormSubmitSuccess = function() { window.onbrand.onCtaFormSubmitSuccess(); }
-window.onload               = function() { window.onbrand.onWindowLoad(); }
-/*============================================================
-    Add any non-hub-event js below
-=============================================================*/ 
+    /*===========================================
+      Add any hub event js into these functions
+    ============================================*/    
+    Hubs.onLoad                 = function() { 
+        window.onbrand.onLoad();
+        // yourFunction();
+    }
+    Hubs.onResize               = function() { window.onbrand.onResize(); }
+    Hubs.onScroll               = function() { window.onbrand.onScroll(); }
+    Hubs.onPageChange           = function() { window.onbrand.onPageChange(); }
+    Hubs.onItemsLoaded          = function() { window.onbrand.onItemsLoaded(); }
+    Hubs.onCtaFormSubmitSuccess = function() { window.onbrand.onCtaFormSubmitSuccess(); }
+    window.onload               = function() { window.onbrand.onWindowLoad(); }
+    /*============================================================
+        Add any non-hub-event js below
+    =============================================================*/ 
 
 
 
@@ -117,7 +117,7 @@ window.onload               = function() { window.onbrand.onWindowLoad(); }
   }
   window.onbrand.onItemsLoaded = function() {}
   window.onbrand.onCtaFormSubmitSuccess = function() {}
-  window.onLoad = function() { // window.onload
+  window.onbrand.onWindowLoad = function() { // window.onload
     topFix();
   };
     
