@@ -27,11 +27,12 @@
     Hubs.onScroll               = function() { window.onbrand.onScroll(); }
     Hubs.onPageChange           = function() { window.onbrand.onPageChange(); }
     Hubs.onItemsLoaded          = function() { window.onbrand.onItemsLoaded(); }
+    Hubs.onCtaActivate          = function() { window.onbrand.onCtaActivate(); }
     Hubs.onCtaFormSubmitSuccess = function() { window.onbrand.onCtaFormSubmitSuccess(); }
     window.onload               = function() { window.onbrand.onWindowLoad(); }
-    /*============================================================
-        Add any non-hub-event js below
-    =============================================================*/ 
+/*============================================================
+    Add any non-hub-event js below
+=============================================================*/ 
 
 
 
@@ -48,35 +49,26 @@
     Header & Footer Ajax
   ===============================================================*/
   var subdir = "<%= name %>";
-  var cacheSwitch = true;
 
-  function headerAjax() {
-    return $.ajax({
-      url: '//cihost.uberflip.com/' + subdir + '/includes/header.html?v1',
-      cache: cacheSwitch
-    }).success(function(data) {
-      $('body').prepend(data);
-            
-      /* Integrate top-nav into main */
-      // $('.webgl  .top-nav').prependTo('.main');
+  // Insert Header
+  $.ajax({
+    url: '//cihost.uberflip.com/' + subdir + '/includes/header.html?v1'
+  }).done(function(data) {
+    $('body').prepend(data);
+          
+    /* Integrate top-nav into main */
+    // $('.top-nav').prependTo('.main');
 
-    });
-  }
-
-  function footerAjax() {
-    return $.ajax({
-      url: '//cihost.uberflip.com/' + subdir + '/includes/footer.html?v1',
-      cache: cacheSwitch
-    }).success(function(data) {
-      $('footer').remove();
-      $('body').append(data);
-    });
-  }
-
-  $.when(headerAjax(), footerAjax()).done(function(a1, a2) {
-   // $.getScript('//cihost.uberflip.com/' + subdir + '/conflict.js');
   });
-    
+
+  // Insert Footer
+  $.ajax({
+    url: '//cihost.uberflip.com/' + subdir + '/includes/footer.html?v1'
+  }).done(function(data) {
+    $('footer').remove();
+    $('body').append(data);
+  });
+
   /*==============================================================
     Customize target streams
   ===============================================================*/
@@ -93,7 +85,7 @@
     Hub hover menu position fix
   ===============================================================*/
   Hubs.Search.prototype.updateOverlaySize = function() {};
-  function topFix() {
+  function fixShareWidget() {
     var navtop = $('.top-nav').offset().top - $(window).scrollTop() + $('.top-nav').height(); // px offset from page top
     $('.share-hub, .share-item, .search-drop-down').css('top', navtop);
     $('.search-results-overlay,.search-results-backdrop').css('top', navtop);
@@ -104,21 +96,22 @@
   ===============================================================*/
   window.onbrand = {};
   window.onbrand.onLoad = function() {
-    topFix();
+    fixShareWidget();
   }
   window.onbrand.onResize = function() {
-    topFix();
+    fixShareWidget();
   }
   window.onbrand.onScroll = function() {
-    topFix();
+    fixShareWidget();
   }
   window.onbrand.onPageChange = function() {
-    topFix();
+    fixShareWidget();
   }
   window.onbrand.onItemsLoaded = function() {}
+  window.onbrand.onCtaActivate = function() {}
   window.onbrand.onCtaFormSubmitSuccess = function() {}
   window.onbrand.onWindowLoad = function() { // window.onload
-    topFix();
+    fixShareWidget();
   };
     
   /*==============================================================

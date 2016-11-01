@@ -68,22 +68,12 @@
 		overflow-x: visible !important;
 		overflow-y: visible !important;
 	}
-	/* strip footer */
-	.webgl body>footer {
-	    position: initial;
-	    color: inherit;
-	    font-size: inherit;
-	    padding: initial;
-	    margin-bottom: initial;
-	    border-top: none;
-	    overflow: auto;
-	}
 	/* side menu .touch error when nav is in main */
 	html.touch body .main .left-nav.desktop {
     	top: 16px
 	}
 	/* ul stuff */
-	.hub-page ul,.listing-page ul {
+	.hub-page #hubs-container ul,.listing-page #hubs-container ul {
 	    margin: 0 !important;
 	    padding: 0 !important;
 	}
@@ -93,7 +83,11 @@
 	}
 	/* normalize icons */
 	#injected-header [class^="icon-"], 
-	#injected-header  [class*=" icon-"]{
+	#injected-header  [class*=" icon-"],
+	#injected-footer [class^="icon-"], 
+	#injected-footer  [class*=" icon-"],
+	#injected-header .icon,
+	#injected-footer .icon{
 		background-image: none;
 	}
 	/* image stretch on mobile */
@@ -158,8 +152,38 @@
 	}*/
 /*============================================================*/ 
 
+/* Font awesome nav icons (white)
+=============================================================*/ 
+    /*.top-nav .right-side-btns .search-container .search-toggle,.top-nav .right-side-btns .search-container .search-toggle:hover,.top-nav .right-side-btns .share-toggle:hover,.top-nav .share-toggle {background-color: transparent;border: none;box-shadow: none;}.top-nav .right-side-btns .search-toggle .search-icon > span,.top-nav .right-side-btns .share-toggle,body .top-nav .right-side-btns .search-toggle.expanded .search-icon span  {background-size: 86%;background-repeat: no-repeat;background-position: initial !important;}body .top-nav .search-container .search-toggle .search-icon > span{background-image:  url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMjE2IDgzMnEwLTE4NS0xMzEuNS0zMTYuNXQtMzE2LjUtMTMxLjUtMzE2LjUgMTMxLjUtMTMxLjUgMzE2LjUgMTMxLjUgMzE2LjUgMzE2LjUgMTMxLjUgMzE2LjUtMTMxLjUgMTMxLjUtMzE2LjV6bTUxMiA4MzJxMCA1Mi0zOCA5MHQtOTAgMzhxLTU0IDAtOTAtMzhsLTM0My0zNDJxLTE3OSAxMjQtMzk5IDEyNC0xNDMgMC0yNzMuNS01NS41dC0yMjUtMTUwLTE1MC0yMjUtNTUuNS0yNzMuNSA1NS41LTI3My41IDE1MC0yMjUgMjI1LTE1MCAyNzMuNS01NS41IDI3My41IDU1LjUgMjI1IDE1MCAxNTAgMjI1IDU1LjUgMjczLjVxMCAyMjAtMTI0IDM5OWwzNDMgMzQzcTM3IDM3IDM3IDkweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==');}.top-nav .right-side-btns .share-toggle {background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMzQ0IDEwMjRxMTMzIDAgMjI2LjUgOTMuNXQ5My41IDIyNi41LTkzLjUgMjI2LjUtMjI2LjUgOTMuNS0yMjYuNS05My41LTkzLjUtMjI2LjVxMC0xMiAyLTM0bC0zNjAtMTgwcS05MiA4Ni0yMTggODYtMTMzIDAtMjI2LjUtOTMuNXQtOTMuNS0yMjYuNSA5My41LTIyNi41IDIyNi41LTkzLjVxMTI2IDAgMjE4IDg2bDM2MC0xODBxLTItMjItMi0zNCAwLTEzMyA5My41LTIyNi41dDIyNi41LTkzLjUgMjI2LjUgOTMuNSA5My41IDIyNi41LTkzLjUgMjI2LjUtMjI2LjUgOTMuNXEtMTI2IDAtMjE4LTg2bC0zNjAgMTgwcTIgMjIgMiAzNHQtMiAzNGwzNjAgMTgwcTkyLTg2IDIxOC04NnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=');}*/
+/*===========================================================*/ 
 
+/*  Invert top nav colors
+=============================================================*/ 
+/*    body .top-nav, .top-nav .left-nav.desktop>li ul li a, body .top-nav .left-nav.desktop>li.hover.has-children,
+    .NAV-BACKGROUND-COLOR
+    {
+        background-color: #3e3e3e; 
+    }
+    body .top-nav .left-nav.desktop>li>a, body .top-nav .left-nav.desktop>li>ul>a, .top-nav .left-nav.desktop>li ul li a, body .top-nav .secondary-logo a,
+    .NAV-TEXT-COLOR
+    {
+        color: white;
+    }
+    body .top-nav .left-nav.desktop>li.selected>a, body .top-nav .left-nav.desktop>li.selected.hover>a, body .top-nav .left-nav.desktop>li.selected.hover>a:hover, body .top-nav .left-nav.desktop>li>a:hover, body .top-nav .left-nav.desktop>li ul li a:hover, body .top-nav .secondary-logo a:hover,
+    .NAV-TEXT-HOVER-COLOR
+    {
+        color: white;
 
+        text-decoration: none !important;
+    }
+    .top-nav .left-nav.desktop>li ul li a {
+        font-size: .8em;
+        padding: 13px 10px 8px;
+        border: none !important;
+    }
+    body .top-nav .left-nav.desktop>li ul li {margin-bottom: 0;border-right: 0;}
+    .top-nav .left-nav.desktop>li.hover {text-decoration: none;}*/
+/*===========================================================*/
 
 
 
