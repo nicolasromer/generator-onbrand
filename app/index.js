@@ -14,17 +14,22 @@ module.exports = generators.Base.extend({
 		this.log('');
 	},
 	prompting: function() {
-		return this.prompt([{
-			type	: 'input',
-			name	: 'name',
-			message	: 'What is the exact name of this folder? (dashes need to be re-added)',
-			default	: this.appname //cwd
-		}])
-		.then(function(answers){
-			this.config.set({ 
-				name: answers.name
-			});
-		}.bind(this));
+
+		// This makes `appname` a required argument.
+    	this.argument('appname', { type: String, required: true });
+
+
+		// return this.prompt([{
+		// 	type	: 'input',
+		// 	name	: 'name',
+		// 	message	: 'What is the exact name of this folder? (dashes need to be re-added)',
+		// 	default	: this.appname //cwd
+		// }])
+		// .then(function(answers){
+		// 	this.config.set({ 
+		// 		name: answers.name
+		// 	});
+		// }.bind(this));
 
 	},
 
@@ -35,7 +40,7 @@ module.exports = generators.Base.extend({
 			this.templatePath('_inject.js'),
 			this.destinationPath('./onbrand.js'),
 			{ 
-				name: this.config.get('name')
+				name: this.appname
 			}
 		);
 
